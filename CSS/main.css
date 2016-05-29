@@ -1,0 +1,32 @@
+/*Write simple designe, should meet mockup*/
+
+* {
+	box-sizing: borde-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#wrapper {
+	width: 980px;
+	margin: 0 auto;
+
+}
+
+img {
+	margin-right: 60px; 
+	width: 200px;
+	margin-bottom: 60px;
+	margin-top: 5px;
+}
+
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
