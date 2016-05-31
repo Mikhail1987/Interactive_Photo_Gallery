@@ -1,4 +1,4 @@
-/*Write simple designe, should meet mockup*/
+
 
 * {
 	box-sizing: borde-box;
@@ -10,15 +10,25 @@ body {
 	text-align: center;
 }
 
+#header {
+	z-index: 1;
+	background-color: white;
+	height: 100px;
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	
+}
+
 #wrapper {
 	width: 980px;
-	margin: 0 auto;
+	margin: auto;
+	margin-top: 100px;
 
 }
 
 img {
 	margin-right: 60px; 
-	width: 200px;
+	width: 150px;
 	margin-bottom: 60px;
 	margin-top: 5px;
 }
