@@ -40,3 +40,9 @@ img {
 	align-content: flex-start;
 	flex-wrap: wrap;
 }
+
+#liveSearch {
+	margin: 40px;
+	padding: 0 16pt;
+	border-radius: 5px;
+}

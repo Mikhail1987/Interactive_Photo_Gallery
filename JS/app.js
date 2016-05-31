@@ -23,3 +23,17 @@
 	-If empty return all img
 
 */
+
+$("#liveSearch").keyup(function() {
+    var search = $(this).val();
+    console.log(search);
+    $(".gallery img").each(function() {
+    console.log($(this).attr("alt").search);
+        var searchAttr = $(this).attr("alt");
+        if(searchAttr.toLowerCase().search(search.toLowerCase()) > -1) {
+            $(this).show();
+        } else {
+            $(this).fadeOut();
+        }
+    });
+});
