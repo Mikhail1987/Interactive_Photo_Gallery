@@ -11,3 +11,15 @@
 7) This could be a jQuery plugin that you find on the web, or code that you write yourself.*/
 
 
+/*
+1) input get
+2) SHow and hide images in real time while typing values 
+	-KeyUp - start condition statment
+	-KeyPress -if input != 0 hide all img (or div with opacity)and show result 
+	
+3)Condition statment 
+	-If value is meet request show result
+	-if not show masseg 
+	-If empty return all img
+
+*/
