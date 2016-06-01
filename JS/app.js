@@ -25,13 +25,14 @@
 */
 
 $("#liveSearch").keyup(function() {
-    var search = $(this).val();
+    var SearchResult = $(this).val();
     console.log(search);
-    $(".gallery img").each(function() {
+    $("#wrapper img").each(function() {
     console.log($(this).attr("alt").search);
-        var searchAttr = $(this).attr("alt");
-        if(searchAttr.toLowerCase().search(search.toLowerCase()) > -1) {
-            $(this).show();
+        var SearchAttr = $(this).attr("alt");
+        if(SearchAttr.toLowerCase().search(SearchResult.toLowerCase()) > -1) {
+            $(this).fadeOut();
+            $(this).fadeIn();
         } else {
             $(this).fadeOut();
         }
