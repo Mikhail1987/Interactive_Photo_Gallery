@@ -26,15 +26,17 @@
 
 $("#liveSearch").keyup(function() {
     var SearchResult = $(this).val();
-    console.log(search);
+    console.log(SearchResult);
     $("#wrapper img").each(function() {
-    console.log($(this).attr("alt").search);
+    console.log($(this).attr("alt").SearchResult);
         var SearchAttr = $(this).attr("alt");
         if(SearchAttr.toLowerCase().search(SearchResult.toLowerCase()) > -1) {
             $(this).fadeOut();
-            $(this).fadeIn();
+            $(this).fadeIn(300);
         } else {
             $(this).fadeOut();
         }
     });
 });
+
+

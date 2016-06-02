@@ -8,6 +8,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	font-family: sans-serif;
 }
 
 #header {
@@ -18,6 +19,27 @@ body {
 	top: 0; left: 0; right: 0;
 	
 }
+
+/*Search Box*/
+
+input#liveSearch{
+  width: 440px;
+  height: 40px;
+  margin-top: 30px;
+  padding-left: 20px;
+  background: white;
+  border: 2px solid rgb(233, 233, 235);
+  font-size: 16pt;
+  color: #262626;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  outline: none;
+    
+}
+
+
+
 
 #wrapper {
 	width: 980px;
@@ -41,8 +63,24 @@ img {
 	flex-wrap: wrap;
 }
 
-#liveSearch {
-	margin: 40px;
-	padding: 0 16pt;
-	border-radius: 5px;
+
+
+#overlay {
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align:center;
+}
+
+#overlay img {
+  margin-top: 10%;
+
+}
+
+#overlay {
+  color: rgb(233, 233, 235);
 }
