@@ -1,7 +1,7 @@
 /*Overlay*/
 
 var $overlay = $('<div id="overlay"></div>');
-var $image = $('<img>');
+var $image = $('<img class="full_size">');
 var $caption = $('<p></p>');
 
 //an  image to overlay
@@ -17,7 +17,7 @@ $("body").append($overlay);
 //1. Capture the click event on a link to an image
  $("#wrapper a").click(function(event){
    event.preventDefault()
-
+   $(".full_size").css("width","60%");
    //Hide fixed header 
 
    $("#header").css( "display", "none" )
@@ -26,7 +26,7 @@ $("body").append($overlay);
   var imageLocation = $(this).attr("href");
 
   //1.2 Update overlay with the image linked in the link
-        $image.attr("src", imageLocation);
+  $image.attr("src", imageLocation);
   //1.1 Show the overlay
    $overlay.show();
 
@@ -40,7 +40,7 @@ $("body").append($overlay);
 //3 When overlay is cllicked
 $overlay.click(function(){
    //3.1 Hide the overlay
-  $("#header").css( "display", "true" )
+  $("#header").css( "display", "true" );
   $overlay.hide();
 
 });
