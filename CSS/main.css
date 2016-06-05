@@ -74,6 +74,7 @@ img {
   left: 0;
   display: none;
   text-align:center;
+  padding-bottom: 200px; 
 }
 
 #overlay img {
@@ -81,8 +82,36 @@ img {
   margin-bottom: 10px;
   margin-right: 0;
   border: 10px solid white;
+  width: 50%;
 }
 
 #overlay {
   color: rgb(233, 233, 235);
 }
+
+#overlay .close {
+    position: relative;
+    bottom: 430;
+    left: 370;
+    color: aliceblue;
+    padding: 5px 10px;
+    border: dashed 3px white;
+    border-radius: 80%;
+}
+
+#overlay .arrow_left {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-right: 14px solid #e2e2e2;
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    right: 98%;
+    z-index: 2;
+}
+
+

@@ -3,44 +3,76 @@
 var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img class="full_size">');
 var $caption = $('<p></p>');
+var $exit = $("<button><i class='close'></i></button>");
+var $buttonLeft = $("<button class='arrow_left'></button>");
+var $buttonRight = $("<button class='arrow_right'></button>");
 
 //an  image to overlay
+$overlay.append($exit);
 $overlay.append($image);
 
-//2. Add an overlay
+//Add an overlay
 $("body").append($overlay);
 
 
-  //2.2 A caption
-  $overlay.append($caption);
+  //A caption
+$overlay.append($caption);
+$overlay.append($buttonLeft);
+$overlay.append($buttonRight);
 
-//1. Capture the click event on a link to an image
+
+//Capture the click event on a link to an image
  $("#wrapper a").click(function(event){
    event.preventDefault()
-   $(".full_size").css("width","60%");
    //Hide fixed header 
-
-   $("#header").css( "display", "none" )
-
-
+   $("#header").css( "display", "none" );
+   
   var imageLocation = $(this).attr("href");
-
-  //1.2 Update overlay with the image linked in the link
+  currentImg = $(this);
+  currentImg.addClass("selected");
+  //Update overlay with the image linked in the link
   $image.attr("src", imageLocation);
-  //1.1 Show the overlay
-   $overlay.show();
+  //Show the overlay
+   $overlay.fadeIn("show");
 
-  //1.3 Get child's  alt attribute and set caption
+  //Get child's  alt attribute and set caption
     var captionText = $(this).children("img").attr("alt");
     //add text to overlay
     $caption.text(captionText);
+
+     //Creating buttons
+    $buttonLeft.click(function() {
+        newImg = $("#wrapper .selected").prev("a");
+        newImgLocation = newImg.attr("href");
+        newImg.next().removeClass("selected");  //remove class
+        newImg.addClass("selected");            //add clas
+        $image.attr("src", newImgLocation);
+    });
+
+    $buttonRight.click(function() {
+        newImg = $("#wrapper .selected").next("a");
+        newImgLocation = newImg.attr("href");
+        newImg.prev().removeClass("selected");  //remove class
+        newImg.addClass("selected");            //add class
+        $image.attr("src", newImgLocation);
+    });
+
+
  });
 
 
-//3 When overlay is cllicked
-$overlay.click(function(){
-   //3.1 Hide the overlay
-  $("#header").css( "display", "true" );
-  $overlay.hide();
+//When overlay is cllicked
+$exit.click(function() {
+    //Hide the overlay
+      $("#header").css( "display", "true" );
 
+      $overlay.fadeOut();
 });
+
+/*$overlay.click(function(){
+   // Hide the overlay
+      $("#header").css( "display", "true" );
+
+      $overlay.fadeOut();
+
+});*/
