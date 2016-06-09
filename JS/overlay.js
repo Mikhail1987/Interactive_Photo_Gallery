@@ -3,9 +3,9 @@
 var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img class="full_size">');
 var $caption = $('<p></p>');
-var $exit = $("<button><i class='close'></i></button>");
-var $buttonLeft = $("<button class='arrow_left'></button>");
-var $buttonRight = $("<button class='arrow_right'></button>");
+var $exit = $('<img id="close" src="img/close-round.png">');
+var $buttonLeft = $('<img id="left" src="img/arrow-backward.png">');
+var $buttonRight = $('<img id="right" src="img/arrow-forward.png">');
 
 //an  image to overlay
 $overlay.append($exit);

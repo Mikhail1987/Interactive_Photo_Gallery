@@ -77,41 +77,43 @@ img {
   padding-bottom: 200px; 
 }
 
-#overlay img {
+#overlay .full_size {
   margin-top: 40px;
   margin-bottom: 10px;
   margin-right: 0;
   border: 10px solid white;
-  width: 50%;
+  width: 700px;
 }
 
 #overlay {
   color: rgb(233, 233, 235);
 }
 
-#overlay .close {
-    position: relative;
-    bottom: 430;
-    left: 370;
-    color: aliceblue;
-    padding: 5px 10px;
-    border: dashed 3px white;
-    border-radius: 80%;
+#right {
+  width: 50px;
+  height: 50px;
+  margin:0;
+  border: none;
+  float: right;
+  top: 40px;
+
 }
 
-#overlay .arrow_left {
-    content: " ";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 14px solid transparent;
-    border-bottom: 14px solid transparent;
-    border-right: 14px solid #e2e2e2;
-    position: absolute;
-    top: 50%;
-    margin-top: -14px;
-    right: 98%;
-    z-index: 2;
+#left {
+  width: 50px;
+  height: 50px;
+  margin:0;
+  border: none;
+  float: left;
+  transform: rotate(180deg);
 }
 
+#close {
+  width: 20px;
+  height: 20px;
+  margin:0;
+  border: none;
+  float: right;
+  
+}
 
