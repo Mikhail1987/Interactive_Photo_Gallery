@@ -8,17 +8,19 @@ var $buttonLeft = $('<img id="left" src="img/arrow-backward.png">');
 var $buttonRight = $('<img id="right" src="img/arrow-forward.png">');
 
 //an  image to overlay
-$overlay.append($exit);
+
 $overlay.append($image);
+$overlay.append($exit);
 
 //Add an overlay
 $("body").append($overlay);
 
 
   //A caption
-$overlay.append($caption);
+
 $overlay.append($buttonLeft);
 $overlay.append($buttonRight);
+$overlay.append($caption);
 
 
 //Capture the click event on a link to an image

@@ -49,7 +49,8 @@ input#liveSearch{
 }
 
 img {
-	margin-right: 60px; 
+	margin-right: 30px; 
+  margin-left: 30px;
 	width: 150px;
 	margin-bottom: 60px;
 	margin-top: 5px;
@@ -75,6 +76,7 @@ img {
   display: none;
   text-align:center;
   padding-bottom: 200px; 
+
 }
 
 #overlay .full_size {
@@ -92,7 +94,8 @@ img {
 #right {
   width: 50px;
   height: 50px;
-  margin:0;
+  margin-top: 250px;
+  margin-right: 60px;
   border: none;
   float: right;
   top: 40px;
@@ -102,10 +105,18 @@ img {
 #left {
   width: 50px;
   height: 50px;
-  margin:0;
+  margin-top: 250px;
+  margin-left: 60px;
   border: none;
   float: left;
   transform: rotate(180deg);
+}
+
+#left:hover,
+#right:hover,
+#close:hover {
+  opacity: 0.5;
+  cursor:pointer;
 }
 
 #close {
@@ -113,7 +124,9 @@ img {
   height: 20px;
   margin:0;
   border: none;
-  float: right;
+  position: relative;
+  left: 20px;
+  top: -460px;
   
 }
 
