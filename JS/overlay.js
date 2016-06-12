@@ -49,6 +49,9 @@ $overlay.append($caption);
         newImg.next().removeClass("selected");  //remove class
         newImg.addClass("selected");            //add clas
         $image.attr("src", newImgLocation);
+        captionText = newImg.children("img").attr("alt");
+        //console.log(captionText);
+        $caption.text(captionText);
     });
 
     $buttonRight.click(function() {
@@ -57,6 +60,9 @@ $overlay.append($caption);
         newImg.prev().removeClass("selected");  //remove class
         newImg.addClass("selected");            //add class
         $image.attr("src", newImgLocation);
+        captionText = newImg.children("img").attr("alt");
+        //console.log(captionText);
+        $caption.text(captionText);
     });
 
 
